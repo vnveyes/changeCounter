@@ -3,7 +3,7 @@
     let counter =  $state(0);
 
     function addNum(num: number){
-        counter = Math.round(( counter + num ) * 100) / 100;
+        counter = Math.round(( counter + num ) * 100) / 100; //bug fix
     }
         
     function resetNum() {
