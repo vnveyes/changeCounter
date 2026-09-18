@@ -3,7 +3,11 @@
     let counter =  $state(0);
 
     function addNum(num: number){
-        counter += num;
+        counter = Math.round(( counter + num ) * 100) / 100;
+    }
+        
+    function resetNum() {
+        counter = 0;
     }
 
 </script>
@@ -12,13 +16,14 @@
     <div class="card">
         <h1>Change Counter</h1>
         
-        <h2 class="counter">${counter}</h2>
-        <button class="Box" onclick={() => addNum(0.01)}>0.01</button>
-        <button class="Box" onclick={() => addNum(0.05)}>0.05</button>
-        <button class="Box" onclick={() => addNum(0.10)}>0.10</button>
-        <button class="Box" onclick={() => addNum(0.25)}>0.25</button>
-        <button class="Box" onclick={() => addNum(0.50)}>0.50</button>
+        <h2 class="counter">${counter.toFixed(2)}</h2>
+        <button class="Box" onclick={() => addNum(0.01)}>$0.01</button>
+        <button class="Box" onclick={() => addNum(0.05)}>$0.05</button>
+        <button class="Box" onclick={() => addNum(0.10)}>$0.10</button>
+        <button class="Box" onclick={() => addNum(0.25)}>$0.25</button>
+        <button class="Box" onclick={() => addNum(0.50)}>$0.50</button>
         <button class="Box" onclick={() => addNum(1.00)}>$1.00</button>
+		<button class="ResetBox" onclick={() => resetNum()}>Reset</button>
 </div>
 </div>
 
@@ -48,6 +53,22 @@
        border-radius: 15px;
        color: rgb(143, 167, 12);
        padding: 12px 20px;
+       margin: 5px;
+       gap:20px;
+       font-size: 20px;
+       font-weight: 200;
+       transition: all 0.2s;
+       font-family: 'Courier', monospace;
+       cursor: pointer;
+       text-align: center;
+   }
+   
+    .ResetBox {
+       background-color: #023b0e;
+       border: none;
+       border-radius: 15px;
+       color: rgb(143, 167, 12);
+       padding: 12px 80px;
        margin: 5px;
        gap:20px;
        font-size: 20px;
