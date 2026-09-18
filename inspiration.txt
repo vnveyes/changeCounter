@@ -1,0 +1,5 @@
+Mahmoud Hussein
+Paul Castillo
+Ana Suarez Munoz
+
+For our Change Counter, I used money as my visual inspiration. I chose green because it reminded us of U.S. currency and used gold to give the page more color. I made the counter large and white so the amount is easy to see. I also made the buttons change colors when you hover over them so the app feels more interactive. 
