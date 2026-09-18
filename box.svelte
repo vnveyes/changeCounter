@@ -1,5 +1,5 @@
 <script>
-    let { radius = '12px', color = 'darkgreen', width = '100px' } = $props();
+    let { radius = '12px', color = 'darkgreen', width = '100px' } = $props(); //use of props component
 </script>
 
 <div
